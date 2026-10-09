@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/maDU59/ProjectilesTrajectoryPreview/1.21/src/main/resources/assets/ptp/icon.png" width="150">
+  <img src="icon.png" width="150">
   <h1>Projectile Trajectory Preview</h1>
 
   <a href="https://modrinth.com/mod/ptp"><img src="https://img.shields.io/badge/dynamic/json?color=158000&label=downloads&prefix=+%20&query=downloads&url=https://api.modrinth.com/v2/project/preyrsIh&logo=modrinth"></a>
@@ -48,3 +48,19 @@ This mod doesn't work on servers to prevent using it as a cheat in PVP. If you w
 ## 📦 Modpack
 
 Feel free to add this mod in your modpacks.
+
+---
+
+<!-- CYTECH_STAR_HISTORY:START -->
+
+## Star History
+
+<a href="https://star-history.dera.page/#Namnarak/ProjectilesTrajectoryPreview1.21&type=date&legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=Namnarak/ProjectilesTrajectoryPreview1.21&type=date&legend=top-left&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=Namnarak/ProjectilesTrajectoryPreview1.21&type=date&legend=top-left" />
+    <img alt="GitHub star history for Namnarak/ProjectilesTrajectoryPreview1.21" src="https://star-history.dera.page/svg?repos=Namnarak/ProjectilesTrajectoryPreview1.21&type=date&legend=top-left" width="800" />
+  </picture>
+</a>
+
+<!-- CYTECH_STAR_HISTORY:END -->
