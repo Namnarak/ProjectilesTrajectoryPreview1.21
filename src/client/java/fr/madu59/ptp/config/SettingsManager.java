@@ -4,7 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import fr.madu59.ptp.Ptp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import fr.madu59.ptp.config.SettingsManager;
 
 import java.lang.Math;
@@ -26,8 +27,9 @@ import net.minecraft.world.entity.player.Player;
 public class SettingsManager {
 
     public static List<Option<?>> ALL_OPTIONS = new ArrayList<>();
+    private static final Logger LOGGER = LoggerFactory.getLogger("ptp");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    private static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve(Ptp.MOD_ID + ".json");
+    private static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve("ptp.json");
     private static Map<String, String> loadedSettings = loadSettings();
 
     public static Option<Option.State> SHOW_TRAJECTORY = loadOptionWithDefaults(
@@ -353,7 +355,7 @@ public class SettingsManager {
             Map<String, String> map = GSON.fromJson(reader, type);
             return map;
         } catch (Exception e) {
-            Ptp.LOGGER.info("[PTP] Config file not found or invalid, using default");
+            LOGGER.info("[PTP] Config file not found or invalid, using default");
             return null;
         }
     }
