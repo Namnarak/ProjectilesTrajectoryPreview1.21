@@ -1,19 +1,19 @@
 <div align="center">
-
   <img src="icon.png" alt="Projectile Trajectory Preview logo" width="130" />
-
-  # Projectile Trajectory Preview
-
-  **Full client-side projectile trajectory previews for Minecraft Java 1.21.11 (Fabric).**
-
-  [![CI build](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/workflows/build.yml/badge.svg?branch=compat/minecraft-1.21.11)](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/workflows/build.yml)
-  ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b47a)
-  ![Loader](https://img.shields.io/badge/Loader-Fabric-f2bd74)
-  ![Side](https://img.shields.io/badge/Side-Client%20Only-3b82f6)
-  ![License](https://img.shields.io/badge/License-MIT-gray)
-
-  **[Download v1.0.35 .jar](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/download/v1.0.35-mc1.21.11-client/ptp%2B1.21.11-1.0.35.jar)** · **[Release notes](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/tag/v1.0.35-mc1.21.11-client)** · **[Issues](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/issues)**
-
+  <h1>Projectile Trajectory Preview</h1>
+  <p><strong>Full client-side projectile trajectory previews for Minecraft Java 1.21.11 (Fabric).</strong></p>
+  <p>
+    <a href="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/workflows/build.yml"><img src="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/workflows/build.yml/badge.svg?branch=compat/minecraft-1.21.11" alt="CI build" /></a>
+    <img src="https://img.shields.io/badge/Minecraft-1.21.11-62b47a" alt="Minecraft 1.21.11" />
+    <img src="https://img.shields.io/badge/Loader-Fabric-f2bd74" alt="Fabric" />
+    <img src="https://img.shields.io/badge/Side-Client%20Only-3b82f6" alt="Client Only" />
+    <img src="https://img.shields.io/badge/License-MIT-gray" alt="MIT License" />
+  </p>
+  <p>
+    <a href="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/download/v1.0.35-mc1.21.11-client/ptp%2B1.21.11-1.0.35.jar"><strong>Download v1.0.35 .jar</strong></a> ·
+    <a href="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/tag/v1.0.35-mc1.21.11-client"><strong>Release notes</strong></a> ·
+    <a href="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/issues"><strong>Issues</strong></a>
+  </p>
 </div>
 
 > [!IMPORTANT]
