@@ -23,6 +23,22 @@ jobs:
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew build --stacktrace --info
+      - name: verify client-only artifact
+        run: |
+          python3 - <<'PYVERIFY'
+          import json, glob, zipfile
+          jars = [p for p in glob.glob("build/libs/*.jar") if not p.endswith("-sources.jar")]
+          assert len(jars) == 1, jars
+          with zipfile.ZipFile(jars[0]) as jar:
+              files = jar.namelist()
+              metadata = json.loads(jar.read("fabric.mod.json"))
+              assert metadata["environment"] == "client", metadata
+              assert "main" not in metadata["entrypoints"], metadata
+              assert metadata["entrypoints"].get("client") == ["fr.madu59.ptp.PtpClient"]
+              assert not any(p.endswith(("HandshakeNetworking.class", "Ptp.class")) for p in files)
+              assert not any("HANDSHAKE" in p for p in files)
+              print(f"Verified client-only mod: {jars[0]}")
+          PYVERIFY
       - name: capture build artifacts
         uses: actions/upload-artifact@v4
         with:

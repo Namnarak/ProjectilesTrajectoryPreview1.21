@@ -16,11 +16,11 @@
 <!-- CYTECH_README_REFRESH:END -->
 
 > [!NOTE]
-> Original project: [maDU59/ProjectilesTrajectoryPreview](https://github.com/maDU59/ProjectilesTrajectoryPreview). This repository retains its upstream documentation.
+> Original project: [maDU59/ProjectilesTrajectoryPreview](https://github.com/maDU59/ProjectilesTrajectoryPreview). This is a client-only fork for Minecraft 1.21.11 (Fabric).
 
 Ever wondered where your arrow, snowball, or potion will land? This mod gives you a visual preview of projectile trajectories and highlights the target impact zone—perfect for planning shots with precision.
 
-Latest version can be downloaded on [Modrinth](https://modrinth.com/mod/ptp)
+Download this fork from [GitHub Releases](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases). The Modrinth link above refers to the original project.
 
 ## 🔎 Features
 
@@ -43,7 +43,7 @@ To edit the settings of the mod:
 
 ## 🛑 Usage on servers 
 
-This mod doesn't work on servers to prevent using it as a cheat in PVP. If you want to have it on your custom servers, you still can, just install the mod on both, the client and the server.
+**Client-only:** Install this mod and Fabric API on your Minecraft 1.21.11 client. No server-side installation, custom handshake, or server plugin is required. Trajectories are calculated from information available to the client. Predictions may differ from actual server results; always respect each server's PvP and mod rules.
 
 ## 📦 Modpack
 
