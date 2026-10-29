@@ -1,4 +1,4 @@
-package fr.madu59.ptp.physics;
+package fr.madu59.ptp;
 
 import java.util.List;
 

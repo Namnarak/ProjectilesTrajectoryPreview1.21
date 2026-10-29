@@ -1,5 +1,7 @@
 package fr.madu59.ptp.config;
 
+import java.util.List;
+
 import net.minecraft.client.resources.language.I18n;
 
 public class Option<T> {
@@ -29,10 +31,6 @@ public class Option<T> {
         return this.value;
     }
 
-    public T getDefaultValue(){
-        return this.defaultValue;
-    }
-
     public String getId() {
         return this.id;
     }
@@ -43,6 +41,16 @@ public class Option<T> {
 
     public String getDescription() {
         return I18n.get(this.description);
+    }
+
+    public List<?> getPossibleValues(){
+        if(this.value instanceof Boolean){
+            return List.of(true, false);
+        }
+        if(this.value instanceof Enum<?> enumValue){
+            return List.of(enumValue.getDeclaringClass().getEnumConstants());
+        }
+        else return List.of();
     }
 
     public String getValueAsTranslatedString() {
