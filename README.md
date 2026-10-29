@@ -1,53 +1,94 @@
 <div align="center">
-  <img src="icon.png" width="150">
-  <h1>Projectile Trajectory Preview</h1>
 
-  <a href="https://modrinth.com/mod/ptp"><img src="https://img.shields.io/badge/dynamic/json?color=158000&label=downloads&prefix=+%20&query=downloads&url=https://api.modrinth.com/v2/project/preyrsIh&logo=modrinth"></a>
-  <a href="https://curseforge.com/minecraft/mc-mods/ptp"><img src="https://cf.way2muchnoise.eu/full_1348218_downloads.svg"></a>
+  <img src="icon.png" alt="Projectile Trajectory Preview logo" width="130" />
+
+  # Projectile Trajectory Preview
+
+  **Full client-side projectile trajectory previews for Minecraft Java 1.21.11 (Fabric).**
+
+  [![CI build](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/workflows/build.yml/badge.svg?branch=compat/minecraft-1.21.11)](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/workflows/build.yml)
+  ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b47a)
+  ![Loader](https://img.shields.io/badge/Loader-Fabric-f2bd74)
+  ![Side](https://img.shields.io/badge/Side-Client%20Only-3b82f6)
+  ![License](https://img.shields.io/badge/License-MIT-gray)
+
+  **[Download v1.0.35 .jar](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/download/v1.0.35-mc1.21.11-client/ptp%2B1.21.11-1.0.35.jar)** · **[Release notes](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/tag/v1.0.35-mc1.21.11-client)** · **[Issues](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/issues)**
+
 </div>
 
-<!-- CYTECH_README_REFRESH:START -->
-<p align="center"><img alt="Minecraft 1.21 trajectory preview section accent" width="100%" height="10" src="https://capsule-render.vercel.app/api?type=rect&color=0:0F172A,100:22C55E&height=10&section=header"></p>
+> [!IMPORTANT]
+> **Install on your client only.** No mod, plugin, handshake, or configuration is required on the Minecraft server.
+> This is a **pre-release**: GitHub Actions build and JAR structural checks pass, but in-game testing is not yet complete.
 
-<p align="center"><sub>Minecraft 1.21 trajectory preview</sub></p>
+## Features
 
-<p align="center"><a href="#-features">🔎 Features</a> &nbsp;·&nbsp; <a href="#-configuration">⚙️ Configuration</a> &nbsp;·&nbsp; <a href="#-limitations-and-notes">⚠️ Limitations and notes</a> &nbsp;·&nbsp; <a href="#-usage-on-servers">🛑 Usage on servers</a> &nbsp;·&nbsp; <a href="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/issues">Issues</a> &nbsp;·&nbsp; <a href="https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases">Releases</a></p>
+- **Projectile trajectories** – see a predicted flight path before throwing or firing.
+- **Impact previews** – highlight or outline the expected block or entity impact area.
+- **Supported vanilla items** – bow, crossbow, trident, ender pearl, snowball, egg, wind charge, potions, experience bottles, and fishing rod.
+- **Configurable display** – change trajectory color, transparency, style, impact highlighting, and per-item toggles.
+- **Offhand support** – use supported projectiles from your offhand.
+- **Fully client-side** – trajectory prediction and rendering run on the local client without a custom server packet exchange.
 
-<!-- CYTECH_README_REFRESH:END -->
+## Requirements
+
+| Component | Requirement |
+| --- | --- |
+| Minecraft Java Edition | **1.21.11** |
+| Mod loader | **Fabric Loader** |
+| Dependency | **Fabric API** compatible with Minecraft 1.21.11 |
+| Java | **21 or later** |
+| Mod Menu | Optional |
+
+Other Minecraft or loader versions have not been verified for this release.
+
+## Installation
+
+1. Install Fabric Loader for **Minecraft 1.21.11** and a compatible Fabric API.
+2. Download **[ptp+1.21.11-1.0.35.jar](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases/download/v1.0.35-mc1.21.11-client/ptp%2B1.21.11-1.0.35.jar)**.
+3. Place the JAR in your Minecraft instance's `mods/` folder (typically `.minecraft/mods/`).
+4. Start the Minecraft **Fabric 1.21.11** instance. **Do not install this mod on the server.**
+
+**สำหรับผู้เล่นไทย:** ลง Fabric 1.21.11 และ Fabric API จากนั้นนำไฟล์ `.jar` ไปใส่ในโฟลเดอร์ `mods` ของ Minecraft ฝั่งผู้เล่นเท่านั้น ไม่ต้องลง Mod ที่เซิร์ฟเวอร์
+
+## Configuration and controls
+
+- Open the configuration screen with the **`/ptpConfig`** client command.
+- If Mod Menu is installed, open the mod's configuration through Mod Menu.
+- Settings are saved to `.minecraft/config/ptp.json` (inside your active Minecraft instance).
+- Hold **B** (default) to preview a dropped item's trajectory.
+- A separate **trajectory toggle** keybind is provided but is unbound by default; assign it under Minecraft Controls / Key Binds.
+
+## Multiplayer and limitations
+
+- **Server installation is not required.** The mod has no server initializer or custom handshake packets.
+- Trajectory predictions use client-visible information. Random projectile spread, latency, server-side physics, and other discrepancies may make actual impact locations differ.
+- Items from other mods are not officially supported by this build.
+- Some servers restrict trajectory-assistance mods, particularly in PvP. Follow the server's rules before using this mod.
+
+## Source, builds, and project status
+
+- **Working 1.21.11 source:** [`compat/minecraft-1.21.11`](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/tree/compat/minecraft-1.21.11).
+- **Release v1.0.35:** built from commit [`5f28bc0`](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/commit/5f28bc0b5afea6fddacdf6ac392fff0d5992b70d).
+- **Verified CI:** [GitHub Actions run #40929984005](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/actions/runs/40929984005) passed Java compilation, remapping, JAR metadata checks, and artifact upload.
+- **`master` branch:** contains separate newer-version development code; do not assume the master branch builds for Minecraft 1.21.11.
+- **Earlier v1.0.34 release:** remains available in [Releases](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases), but **v1.0.35** is the first full client-only release.
+
+To build this version from source:
+
+```bash
+git clone --branch compat/minecraft-1.21.11 https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21.git
+cd ProjectilesTrajectoryPreview1.21
+./gradlew build
+```
+
+Find the remapped mod JAR in `build/libs/`, excluding the `-sources.jar` file.
+
+## Credits and license
+
+Based on the original MIT-licensed **[Projectile Trajectory Preview by maDU59](https://github.com/maDU59/ProjectilesTrajectoryPreview)**. Original artwork and attribution are retained. See [LICENSE](LICENSE).
 
 > [!NOTE]
-> Original project: [maDU59/ProjectilesTrajectoryPreview](https://github.com/maDU59/ProjectilesTrajectoryPreview). This is a client-only fork for Minecraft 1.21.11 (Fabric).
-
-Ever wondered where your arrow, snowball, or potion will land? This mod gives you a visual preview of projectile trajectories and highlights the target impact zone—perfect for planning shots with precision.
-
-Download this fork from [GitHub Releases](https://github.com/Namnarak/ProjectilesTrajectoryPreview1.21/releases). The Modrinth link above refers to the original project.
-
-## 🔎 Features
-
-- Trajectory Visualization: See the path your projectile will follow before you launch it.
-- Target Highlighting: Know exactly where your shot is likely to land.
-- Customizable Display: Tailor the look of the trajectory line, target outline, and highlight to suit your style.
-
-## ⚙️ Configuration
-
-To edit the settings of the mod:
-- Use Mod Menu
-- Use commands `/ptpConfig setting value`
-- Edit the config file in `.minecraft/config/ptp.json`
-
-
-## ⚠️ Limitations and notes
-
-- Minecraft Projectiles often have a random offset, so the actual impact may sometime differs a bit from the preview.
-- Modded items are not yet supported. If you want compatibility with a specific mod, open an issue on Github and suggest it, I'll do my best to add it.
-
-## 🛑 Usage on servers 
-
-**Client-only:** Install this mod and Fabric API on your Minecraft 1.21.11 client. No server-side installation, custom handshake, or server plugin is required. Trajectories are calculated from information available to the client. Predictions may differ from actual server results; always respect each server's PvP and mod rules.
-
-## 📦 Modpack
-
-Feel free to add this mod in your modpacks.
+> The Modrinth and CurseForge listings for Projectile Trajectory Preview refer to the **original upstream project**, not this fork's GitHub Releases.
 
 ---
 
